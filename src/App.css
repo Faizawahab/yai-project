@@ -1,0 +1,111 @@
+#mlogo {
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 0.4;
+  }
+
+  /* section {
+    padding: 0 4rem;
+  } */
+
+  .nav {
+    color: black;
+  }
+
+  .hero {
+    position: relative;
+    
+  }
+
+  .adv {
+   display: flex;
+   justify-content: center;
+   
+  }
+
+  .adv>div{
+    position: relative;
+    width: 22rem;
+    height: 17rem;
+    padding: 30px;
+    /* text-align: center; */
+    /* justify-self: center; */
+    /* display: flex; */
+    /* align-items: center; */
+  }
+
+  
+  .adv>div>p{
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Muli", sans-serif;
+    /* text-align: center; */
+
+  }
+
+  .adv>div>h1{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+.adv>div>span{
+  
+    position: relative;
+    font-size:35px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: block;
+    width: 75px;
+    height: 75px;
+    /* line-height: 75px; */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+ /* display: flex; */
+ /* margin: auto; */
+text-align: center;
+}
+
+.img{
+  width: 5rem;
+  height: 21rem;
+  background-size: contain;
+}
+
+
+/* .img:hover{
+  background-color: black;
+}
+
+.imgs:hover{
+  background-color: red;
+} */
+
+.img{
+  position: relative;
+}
+.overlay{
+  background-color: black;
+  opacity: 0.6;
+  inset: 0;
+  position: absolute;
+}
+
+/* .container>div{
+  justify-content: center;
+  align-items: center;
+} */
+
