@@ -6,12 +6,12 @@ import Adop4 from '../assets/gal5.jpg';
 
 function Gallery() {
   return (
-    <div className="mt-10 px-[4rem]">
+    <div className="mt-10 px-6 md:px-12 lg:px-24">
       <h1 className="text-center text-3xl font-bold text-[#1a1f71]">Gallery</h1>
       
-      <div className="grid grid-cols-4 gap-5 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10">
         {/* Image 1 */}
-        <div className="relative overflow-hidden group h-[21rem]">
+        <div className="relative overflow-hidden group h-[18rem] sm:h-[21rem]">
           <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition duration-300"></div>
           <img
             src={Adop1}
@@ -21,7 +21,7 @@ function Gallery() {
         </div>
 
         {/* Image 2 */}
-        <div className="relative overflow-hidden group h-[21rem]">
+        <div className="relative overflow-hidden group h-[18rem] sm:h-[21rem]">
           <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition duration-300"></div>
           <img
             src={Adop2}
@@ -31,7 +31,7 @@ function Gallery() {
         </div>
 
         {/* Image 3 */}
-        <div className="relative overflow-hidden group h-[21rem]">
+        <div className="relative overflow-hidden group h-[18rem] sm:h-[21rem]">
           <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition duration-300"></div>
           <img
             src={Adop3}
@@ -41,7 +41,7 @@ function Gallery() {
         </div>
 
         {/* Image 4 */}
-        <div className="relative overflow-hidden group h-[21rem]">
+        <div className="relative overflow-hidden group h-[18rem] sm:h-[21rem]">
           <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition duration-300"></div>
           <img
             src={Adop4}

@@ -11,9 +11,6 @@ import { FaMoneyCheckAlt } from "react-icons/fa";
 import { SiEasyeda } from "react-icons/si";
 import Gallery from "./Gallery";
 
-
-
-
 const images = [
   `url(${image1})`,
   `url(${image2})`,
@@ -23,7 +20,6 @@ const images = [
 const LandingPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Automatically change the background image every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -33,21 +29,7 @@ const LandingPage = () => {
 
   return (
     <div>
-    <section className="hero">
-      
-              <div className="overlay"></div>
-
-      <div className="relative h-screen overflow-hidden">
-        {/* Hero Section */}
-        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 z-10 text-center">
-          <section className=" text-white py-20">
-            <h1 id="logo" className=" text-5xl font-bold">Welcome E-Bike</h1>
-            <p className="text-l mt-4"> Mobility with Smart Adaptive Technology</p>
-            <div><button className="px-5 py-3 rounded-xl mt-7 hover:bg-blue-700 bg-blue-500"> <a href="#contact">Contact Us</a></button></div>
-          </section>
-        </div>
-
-        {/* Background Image Slider */}
+      <section className="relative h-screen flex flex-col justify-center items-center text-center text-white">
         <motion.div
           className="absolute inset-0 h-full w-full bg-cover bg-center transition-all"
           style={{ backgroundImage: images[currentImageIndex] }}
@@ -57,40 +39,40 @@ const LandingPage = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5 }}
         />
-        
-      </div>
+        <div className="relative z-10 px-6 md:px-12 lg:px-24">
+          <h1 className="text-4xl md:text-5xl font-bold">Welcome to E-Bike</h1>
+          <p className="text-lg mt-4">Mobility with Smart Adaptive Technology</p>
+          <button className="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-700 text-white rounded-lg">
+            <a href="#contact">Contact Us</a>
+          </button>
+        </div>
       </section>
-      <div className=" adv  px-[4rem] gap-8 mt-[-2.5rem]">
-          <div className="bg-[#5cb100]">
-            <span ><RiMentalHealthFill className="icon" /></span>
-            <h1>Reduced physical exertion</h1>
-            <p>Electric bikes help riders maintain energy <br /> and cover longer distances without fatigue. </p>
-          </div>
-          {/* <div>
-            <h1>Environmental impact</h1>
-            <p>Electric bikes don't produce greenhouse gases, and they can help reduce air pollution and congestion. </p>
-          </div> */}
-          <div className="bg-[#ec661f]">
-            <span ><FaMoneyCheckAlt className="icon" /></span>
-            <h1>Cost-effectiveness</h1>
-            <p> Electric bikes are cheaper to operate <br /> and maintain than cars and scooters. </p>
-          </div>
-          <div className="bg-[#4fb0dc]">
-            <span ><SiEasyeda className="icon" /></span>
-           <h1>Convenience</h1>
-           <p>Electric bikes can help riders navigate traffic and congested streets. </p>
-          </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 md:px-12 lg:px-24 py-10">
+        <div className="bg-green-500 text-white p-6 rounded-lg text-center flex flex-col items-center">
+          <RiMentalHealthFill className="text-4xl mb-3" />
+          <h1 className="text-xl font-bold">Reduced Physical Exertion</h1>
+          <p className="mt-2">Electric bikes help riders maintain energy and cover longer distances without fatigue.</p>
         </div>
-      
-        <div className="min-h-screen  text-gray-900">
-          <Product />
-          <Inno/>
-          <Gallery/>
-          <Contact />
+        <div className="bg-orange-500 text-white p-6 rounded-lg text-center flex flex-col items-center">
+          <FaMoneyCheckAlt className="text-4xl mb-3" />
+          <h1 className="text-xl font-bold">Cost-effectiveness</h1>
+          <p className="mt-2">Electric bikes are cheaper to operate and maintain than cars and scooters.</p>
         </div>
-      
-      
+        <div className="bg-blue-500 text-white p-6 rounded-lg text-center flex flex-col items-center">
+          <SiEasyeda className="text-4xl mb-3" />
+          <h1 className="text-xl font-bold">Convenience</h1>
+          <p className="mt-2">Electric bikes help riders navigate traffic and congested streets.</p>
+        </div>
       </div>
+      
+      <div className="px-6 md:px-12 lg:px-24">
+        <Product />
+        <Inno />
+        <Gallery />
+        <Contact />
+      </div>
+    </div>
   );
 };
 
