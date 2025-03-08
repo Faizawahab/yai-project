@@ -9,7 +9,7 @@ function Contact() {
         {/* Contact Form */}
         <div className="w-full md:w-1/2 shadow-lg rounded-lg bg-white p-8  ">
           <h2 className="text-3xl font-bold mb-6 text-center md:text-left text-blue-600">Contact Me</h2>
-          <form action="https://formspree.io/f/mgveeddr" method="POST" className="space-y-4">
+          <form action="https://formspree.io/f/mvgkpbaa" method="POST" className="space-y-4">
             
             <div className="flex flex-col">
               <label htmlFor="firstName" className="font-medium">First Name</label>
